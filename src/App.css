@@ -41,3 +41,44 @@ App {
   font-size: 90px;
   background: url('./static/Line.png') 152% 79% no-repeat;
 }
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .chartBox {
+    justify-content: start;
+  }
+}
+
+@media screen and (min-width: 380px) and (max-width: 767px) {
+  .title {
+    font-size: 60px;
+    background: none;
+  }
+
+  .chartBox {
+    gap: 1.2em;
+  }
+
+  .chartBox__item {
+    max-width: 75%;
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 379px) {
+  .chartBox {
+    flex-direction: column;
+    align-content: center;
+    gap: 1em;
+  }
+
+  .chartBox__item {
+    max-width: 75%;
+    height: 100%;
+  }
+
+  .title {
+    text-align: center;
+    font-size: 28px;
+    background: none;
+  }
+}

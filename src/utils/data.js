@@ -15,7 +15,6 @@ const DATA = [
         color: "#31B07E",
     },
 
-
 ];
 
 export default DATA;
