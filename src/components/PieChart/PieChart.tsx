@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { Chart as ChartJS, ArcElement, Tooltip, Legend, Title } from "chart.js";
 import { Doughnut } from "react-chartjs-2";
 import { options1, options2, options3 } from "./PieChart.consts";
+import { getRandomColor } from "./utils";
 import { PieChartProps, /*DoughnutProps*/ } from "./PieChart.interfaces";
 
 ChartJS.register(ArcElement, Tooltip, Legend, Title);
@@ -15,7 +16,7 @@ function PieChart({ pieData, state }: PieChartProps) {
                 label: "Статистика осмотров",
                 data: pieData.map((pieDataItem) => pieDataItem.count),
                 backgroundColor: pieData.map(
-                    (pieDataItem) => pieDataItem.color
+                    (pieDataItem) => pieDataItem.color || getRandomColor()
                 ),
                 borderWidth: 0,
                 cutout: "60%",
