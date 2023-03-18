@@ -1,0 +1,43 @@
+App {
+  width: 95%;
+  margin: 2em auto 0 auto;
+}
+
+.chartBox {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2em;
+  text-align: center;
+  margin: auto;
+}
+
+.chartBox__item {
+  position: relative;
+  background-color: #171820;
+  padding: 0.5em 1em 1em 1em;
+  border-radius: 10px;
+}
+
+.chartBox__small {
+  height: 8em;
+}
+
+.chartBox__middle {
+  width: 12em;
+  height: 8em;
+}
+
+.chartBox__big {
+  width: 13em;
+}
+
+.title {
+  width: 84%;
+  padding-left: 1.3em;
+  font-family: 'Inter', sans-serif;
+  font-size: 90px;
+  background: url('./static/Line.png') 152% 79% no-repeat;
+}

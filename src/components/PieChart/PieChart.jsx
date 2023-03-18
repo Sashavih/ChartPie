@@ -55,7 +55,7 @@ function PieChart({ pieData, state }) {
                         return (
                             <Doughnut
                                 data={userPieData}
-                                options={options1}
+                                options={options2}
                                 plugins={[textCenter]}
                             />
                         );
@@ -63,7 +63,7 @@ function PieChart({ pieData, state }) {
                         return (
                             <Doughnut
                                 data={userPieData}
-                                options={options1}
+                                options={options3}
                                 plugins={[textCenter]}
                             />
                         );

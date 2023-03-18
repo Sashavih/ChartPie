@@ -10,13 +10,13 @@ function App() {
     <div className="App">
       <h1 className="title">PieChart</h1>
       <div className="chartBox">
-        <div >
+        <div className="chartBox__item chartBox__small">
           <PieChart pieData={DATA} state={1}></PieChart>
         </div>
-        <div>
+        <div className="chartBox__item chartBox__middle">
           <PieChart pieData={DATA} state={2}></PieChart>
         </div>
-        <div >
+        <div className="chartBox__item chartBox__big">
           <PieChart pieData={DATA} state={3}></PieChart>
         </div>
       </div>
