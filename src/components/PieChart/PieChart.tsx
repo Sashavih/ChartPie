@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { Chart as ChartJS, ArcElement, Tooltip, Legend, Title } from "chart.js";
 import { Doughnut } from "react-chartjs-2";
 import { options1, options2, options3 } from "./PieChart.consts";
-import { PieChartProps } from "./PieChart.interfaces";
+import { PieChartProps, /*DoughnutProps*/ } from "./PieChart.interfaces";
 
 ChartJS.register(ArcElement, Tooltip, Legend, Title);
 
