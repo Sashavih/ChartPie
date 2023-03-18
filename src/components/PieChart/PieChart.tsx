@@ -3,9 +3,11 @@ import React, { useState } from "react";
 import { Chart as ChartJS, ArcElement, Tooltip, Legend, Title } from "chart.js";
 import { Doughnut } from "react-chartjs-2";
 import { options1, options2, options3 } from "./PieChart.consts";
+import { PieChartProps } from "./PieChart.interfaces";
+
 ChartJS.register(ArcElement, Tooltip, Legend, Title);
 
-function PieChart({ pieData, state }) {
+function PieChart({ pieData, state }: PieChartProps) {
     const [userPieData] = useState({
         labels: pieData.map((dataItem) => dataItem.name + "  " + dataItem.count),
         datasets: [
@@ -23,7 +25,7 @@ function PieChart({ pieData, state }) {
 
     const [textCenter] = useState({
         id: "textCenter",
-        beforeDatasetsDraw: (chart) => {
+        beforeDatasetsDraw: (chart: any) => {
             const { ctx, data } = chart;
 
             ctx.save();
@@ -32,7 +34,7 @@ function PieChart({ pieData, state }) {
             ctx.textAlign = "center";
             ctx.textBaseline = "middle";
             ctx.fillText(
-                data.datasets[0].data.reduce((sum, item) => sum + item, 0),
+                data.datasets[0].data.reduce((sum: number, item: number) => sum + item, 0),
                 chart.getDatasetMeta(0).data[0].x,
                 chart.getDatasetMeta(0).data[0].y
             );
@@ -47,7 +49,7 @@ function PieChart({ pieData, state }) {
                         return (
                             <Doughnut
                                 data={userPieData}
-                                options={options1}
+                                options={options1 as any}
                                 plugins={[textCenter]}
                             />
                         );
@@ -55,7 +57,7 @@ function PieChart({ pieData, state }) {
                         return (
                             <Doughnut
                                 data={userPieData}
-                                options={options2}
+                                options={options2 as any}
                                 plugins={[textCenter]}
                             />
                         );
@@ -63,7 +65,7 @@ function PieChart({ pieData, state }) {
                         return (
                             <Doughnut
                                 data={userPieData}
-                                options={options3}
+                                options={options3 as any}
                                 plugins={[textCenter]}
                             />
                         );

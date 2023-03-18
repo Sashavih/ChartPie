@@ -27,10 +27,10 @@ export const options2 = {
     plugins: {
         // Стилизую labels;
         legend: {
-            onHover: (event) => {
+            onHover: (event: any) => {
                 event.native.target.style.cursor = "pointer";
             },
-            onLeave: (event) => {
+            onLeave: (event: any) => {
                 event.native.target.style.cursor = "default";
             },
             position: "right",
@@ -61,10 +61,10 @@ export const options3 = {
     plugins: {
         // Стилизую labels;
         legend: {
-            onHover: (event) => {
+            onHover: (event: any) => {
                 event.native.target.style.cursor = "pointer";
             },
-            onLeave: (event) => {
+            onLeave: (event: any) => {
                 event.native.target.style.cursor = "default";
             },
             position: "bottom",
