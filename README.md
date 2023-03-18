@@ -1,4 +1,4 @@
-Chart to display data.
+### Chart to display data.
 
 ### Getting started
 In the project directory, you can run:
