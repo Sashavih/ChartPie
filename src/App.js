@@ -11,13 +11,13 @@ function App() {
       <h1 className="title">PieChart</h1>
       <div className="chartBox">
         <div >
-          <PieChart></PieChart>
+          <PieChart pieData={DATA} state={1}></PieChart>
         </div>
         <div>
-          <PieChart></PieChart>
+          <PieChart pieData={DATA} state={2}></PieChart>
         </div>
         <div >
-          <PieChart></PieChart>
+          <PieChart pieData={DATA} state={3}></PieChart>
         </div>
       </div>
     </div>

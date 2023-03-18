@@ -2,6 +2,7 @@ import "./PieChart.css";
 import React, { useState } from "react";
 import { Chart as ChartJS, ArcElement, Tooltip, Legend, Title } from "chart.js";
 import { Doughnut } from "react-chartjs-2";
+import { options1, options2, options3 } from "./PieChart.consts";
 ChartJS.register(ArcElement, Tooltip, Legend, Title);
 
 function PieChart({ pieData, state }) {
@@ -46,6 +47,7 @@ function PieChart({ pieData, state }) {
                         return (
                             <Doughnut
                                 data={userPieData}
+                                options={options1}
                                 plugins={[textCenter]}
                             />
                         );
@@ -53,6 +55,7 @@ function PieChart({ pieData, state }) {
                         return (
                             <Doughnut
                                 data={userPieData}
+                                options={options1}
                                 plugins={[textCenter]}
                             />
                         );
@@ -60,6 +63,7 @@ function PieChart({ pieData, state }) {
                         return (
                             <Doughnut
                                 data={userPieData}
+                                options={options1}
                                 plugins={[textCenter]}
                             />
                         );
