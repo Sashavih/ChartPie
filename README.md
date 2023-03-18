@@ -2,12 +2,14 @@
 
 
 
+
 ### Getting started
 In the project directory, you can run:
 
 `npm install`
 
 `npm run start`
+
 
 ### Technologies:
 <div>
