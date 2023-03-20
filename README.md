@@ -1,4 +1,5 @@
-### Chart to display data.
+ 🍩 Chart to display data 
+
 
 
 
@@ -8,6 +9,7 @@ In the project directory, you can run:
 `npm install`
 
 `npm run start`
+
 
 ### Technologies:
 <div>
