@@ -12,12 +12,12 @@ ChartJS.register(ArcElement, Tooltip, Legend, Title);
 function PieChart({ pieData, state }: PieChartProps) {
 
     const [userPieData] = useState({
-        labels: pieData.slice(0, 6).map((dataItem) => dataItem.name + "  " + dataItem.count),
+        labels: pieData.slice(0, 15).map((dataItem) => dataItem.name + "  " + dataItem.count),
         datasets: [
             {
                 label: "Статистика осмотров",
-                data: pieData.slice(0, 6).map((pieDataItem) => pieDataItem.count),
-                backgroundColor: pieData.slice(0, 6).map(
+                data: pieData.slice(0, 15).map((pieDataItem) => pieDataItem.count),
+                backgroundColor: pieData.slice(0, 15).map(
                     (pieDataItem) => pieDataItem.color || getRandomColor()
                 ),
                 borderWidth: 0,

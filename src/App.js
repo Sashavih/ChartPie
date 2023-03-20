@@ -1,9 +1,9 @@
 import "./App.css";
 import React from "react";
 import { Chart as ChartJS, ArcElement, Tooltip, Legend, Title } from "chart.js";
-import PieChart from "./components/PieChart/PieChart.tsx";
+import PieChart from "./components/PieChart/PieChart";
 import DATA from "./utils/data";
-import { PieChartState } from "./components/PieChart/PieChart.enums.ts";
+import { PieChartState } from "./components/PieChart/PieChart.enums";
 
 ChartJS.register(ArcElement, Tooltip, Legend, Title);
 

@@ -1,5 +1,5 @@
-App {
-  width: 95%;
+.App {
+  width: 87%;
   margin: 2em auto 0 auto;
 }
 
@@ -11,7 +11,6 @@ App {
   flex-wrap: wrap;
   gap: 2em;
   text-align: center;
-  margin: auto;
 }
 
 .chartBox__item {
@@ -21,37 +20,65 @@ App {
   border-radius: 10px;
 }
 
-.chartBox__small {
-  height: 8em;
-}
-
-.chartBox__middle {
-  width: 12em;
-  height: 8em;
-}
-
 .chartBox__big {
-  width: 13em;
+  width: 12em;
 }
 
 .title {
-  width: 84%;
-  padding-left: 1.3em;
   font-family: 'Inter', sans-serif;
   font-size: 90px;
-  background: url('./static/Line.png') 152% 79% no-repeat;
+}
+
+.title:after {
+  display: block;
+  position: relative;
+  left: 32%;
+  bottom: 15px;
+  width: 64%;
+  content: '';
+  display: block;
+  height: 1px;
+  background: white;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-  .chartBox {
-    justify-content: start;
+  .App {
+    width: 95%;
+    margin: 0.5em auto 0 auto;
   }
+
+  .chartBox {
+    justify-content: center;
+  }
+
+  .title {
+    text-align: center;
+  }
+
+  .title:after {
+    left: 0;
+    width: 100%;
+    bottom: 0;
+  }
+
 }
 
 @media screen and (min-width: 380px) and (max-width: 767px) {
+  .App {
+    width: 95%;
+    margin: 0.5em auto 0 auto;
+  }
+
   .title {
     font-size: 60px;
-    background: none;
+    text-align: center;
+    padding: 0;
+  }
+
+  .title:after {
+    left: 0;
+    width: 100%;
+    bottom: 0;
   }
 
   .chartBox {
@@ -65,6 +92,11 @@ App {
 }
 
 @media screen and (max-width: 379px) {
+  .App {
+    width: 95%;
+    margin: 0.5em auto 0 auto;
+  }
+
   .chartBox {
     flex-direction: column;
     align-content: center;
@@ -72,14 +104,16 @@ App {
   }
 
   .chartBox__item {
-    max-width: 75%;
-    height: 100%;
+    max-width: 80%;
   }
-
 
   .title {
     text-align: center;
+    padding: 0;
     font-size: 28px;
-    background: none;
+  }
+
+  .title:after {
+    display: none;
   }
 }
