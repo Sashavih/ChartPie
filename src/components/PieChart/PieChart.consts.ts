@@ -22,6 +22,7 @@ export const options1 = {
 
 // Настройки второго доната;
 export const options2 = {
+
     responsive: true,
     maintainAspectRatio: true,
     plugins: {
